@@ -15,7 +15,7 @@ public class ConditionUtils {
     }
 
     /**
-     * @param objects
+     * @param objects to be checked
      * @return {@code true} if all parameters are not {@code null}
      */
     public static boolean areNotNull(Object... objects) {
@@ -33,7 +33,7 @@ public class ConditionUtils {
     }
 
     /**
-     * @param objects
+     * @param objects to be checked
      * @return {@code true} if all parameters are {@code null} or there is no parameter
      */
     public static boolean areNull(Object... objects) {
@@ -51,8 +51,8 @@ public class ConditionUtils {
     }
 
     /**
-     * @param value
-     * @param comparisons
+     * @param value       to be compared
+     * @param comparisons to be used
      * @return {@code true} if {@code value} equals all objects in {@code comparisons}
      */
     public static boolean equalsAll(Object value, Object... comparisons) {
@@ -74,8 +74,8 @@ public class ConditionUtils {
     }
 
     /**
-     * @param value
-     * @param comparisons
+     * @param value       to be compared
+     * @param comparisons to be used
      * @return {@code true} if {@code value} equals any object in {@code comparisons}
      */
     public static boolean equalsAny(Object value, Object... comparisons) {
@@ -97,8 +97,8 @@ public class ConditionUtils {
     }
 
     /**
-     * @param value
-     * @param comparisons
+     * @param value       to be compared
+     * @param comparisons to be used
      * @return {@code true} if {@code value} equals no object in {@code comparisons}
      */
     public static boolean equalsNone(Object value, Object... comparisons) {
@@ -120,7 +120,7 @@ public class ConditionUtils {
     }
 
     /**
-     * @param objects
+     * @param objects to be checked
      * @return {@code true} if {@code objects} contains a value that is not {@code null}
      */
     public static boolean isAnyNotNull(Object... objects) {
@@ -138,7 +138,7 @@ public class ConditionUtils {
     }
 
     /**
-     * @param objects
+     * @param objects to be checked
      * @return {@code true} if {@code objects} contains a value that is {@code null} or there is no parameter
      */
     public static boolean isAnyNull(Object... objects) {
