@@ -1,4 +1,4 @@
-package JConditionTools.ConditionUtils;
+package jcondition_tools.condition_utils;
 
 /**
  * ConditionUtils
@@ -55,14 +55,13 @@ public class ConditionUtils {
      * @param comparisons
      * @return {@code true} if {@code value} equals all objects in {@code comparisons}
      */
-    // TODO: test
     public static boolean equalsAll(Object value, Object... comparisons) {
         if (value == null) {
-            if (areNull(comparisons)) {
-                return true;
-            } else {
-                return false;
-            }
+            return areNull(comparisons);
+        }
+
+        if (comparisons == null || comparisons.length == 0) {
+            return false;
         }
 
         for (Object comparison : comparisons) {
@@ -74,21 +73,58 @@ public class ConditionUtils {
         return true;
     }
 
-    // TODO: test, JavaDoc
+    /**
+     * @param value
+     * @param comparisons
+     * @return {@code true} if {@code value} equals any object in {@code comparisons}
+     */
     public static boolean equalsAny(Object value, Object... comparisons) {
-        // TODO
+        if (value == null) {
+            return isAnyNull(comparisons);
+        }
+
+        if (areNull(comparisons)) {
+            return false;
+        }
+
+        for (Object comparison : comparisons) {
+            if (value.equals(comparison)) {
+                return true;
+            }
+        }
+
         return false;
     }
 
-    // TODO: test, JavaDoc
+    /**
+     * @param value
+     * @param comparisons
+     * @return {@code true} if {@code value} equals no object in {@code comparisons}
+     */
     public static boolean equalsNone(Object value, Object... comparisons) {
-        // TODO
-        return false;
+        if (value == null) {
+            return areNotNull(comparisons);
+        }
+
+        if (areNull(comparisons)) {
+            return true;
+        }
+
+        for (Object comparison : comparisons) {
+            if (value.equals(comparison)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
-    // TODO: test, JavaDoc
+    /**
+     * @param objects
+     * @return {@code true} if {@code objects} contains a value that is not {@code null}
+     */
     public static boolean isAnyNotNull(Object... objects) {
-        if (objects.length == 0) {
+        if (objects == null || objects.length == 0) {
             return false;
         }
 
@@ -101,9 +137,12 @@ public class ConditionUtils {
         return false;
     }
 
-    // TODO: test, JavaDoc
+    /**
+     * @param objects
+     * @return {@code true} if {@code objects} contains a value that is {@code null} or there is no parameter
+     */
     public static boolean isAnyNull(Object... objects) {
-        if (objects.length == 0) {
+        if (objects == null || objects.length == 0) {
             return true;
         }
 
