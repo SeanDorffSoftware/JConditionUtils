@@ -12,26 +12,26 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class ListConditionUtilsTest {
     static final List NULL_LIST = null;
     static final List<Object> EMPTY_LIST = Collections.emptyList();
-    static final List<Integer> NON_EMPTY_LIST = Arrays.asList(new Integer[]{1, 2});
+    static final List<Integer> NON_EMPTY_LIST = Arrays.asList(1, 2);
 
     @Test
-    void testIsNotNullOrEmptyListNegative() {
+    void testIsNotNullOrEmptyNegative() {
         assertFalse(ListConditionUtils.isNotNullOrEmpty(NULL_LIST));
         assertFalse(ListConditionUtils.isNotNullOrEmpty(EMPTY_LIST));
     }
 
     @Test
-    void testIsNotNullOrEmptyListPositive() {
+    void testIsNotNullOrEmptyPositive() {
         assertTrue(ListConditionUtils.isNotNullOrEmpty(NON_EMPTY_LIST));
     }
 
     @Test
-    void testIsNullOrEmptyListNegative() {
+    void testIsNullOrEmptyNegative() {
         assertFalse(ListConditionUtils.isNullOrEmpty(NON_EMPTY_LIST));
     }
 
     @Test
-    void testIsNullOrEmptyListPositive() {
+    void testIsNullOrEmptyPositive() {
         assertTrue(ListConditionUtils.isNullOrEmpty(NULL_LIST));
         assertTrue(ListConditionUtils.isNullOrEmpty(EMPTY_LIST));
     }

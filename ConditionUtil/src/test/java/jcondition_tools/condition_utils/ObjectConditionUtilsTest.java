@@ -13,7 +13,7 @@ class ObjectConditionUtilsTest {
     static final Object OBJECT_3 = new Object();
 
     @Test
-    void testAreNotNullObjectNegative() {
+    void testAreNotNullNegative() {
         assertFalse(ObjectConditionUtils.areNotNull());
         assertFalse(ObjectConditionUtils.areNotNull(NULL_OBJECT));
         assertFalse(ObjectConditionUtils.areNotNull(NULL_OBJECT_ARRAY));
@@ -23,13 +23,13 @@ class ObjectConditionUtilsTest {
     }
 
     @Test
-    void testAreNotNullObjectPositive() {
+    void testAreNotNullPositive() {
         assertTrue(ObjectConditionUtils.areNotNull(OBJECT_1));
         assertTrue(ObjectConditionUtils.areNotNull(OBJECT_1, OBJECT_1));
     }
 
     @Test
-    void testAreNullObjectNegative() {
+    void testAreNullNegative() {
         assertFalse(ObjectConditionUtils.areNull(OBJECT_1));
         assertFalse(ObjectConditionUtils.areNull(OBJECT_1, OBJECT_1));
         assertFalse(ObjectConditionUtils.areNull(null, OBJECT_1));
@@ -37,7 +37,7 @@ class ObjectConditionUtilsTest {
     }
 
     @Test
-    void testAreNullObjectPositive() {
+    void testAreNullPositive() {
         assertTrue(ObjectConditionUtils.areNull());
         assertTrue(ObjectConditionUtils.areNull(NULL_OBJECT));
         assertTrue(ObjectConditionUtils.areNull(NULL_OBJECT_ARRAY));
@@ -45,7 +45,7 @@ class ObjectConditionUtilsTest {
     }
 
     @Test
-    void testEqualsAllObjectNegative() {
+    void testEqualsAllNegative() {
         assertFalse(ObjectConditionUtils.equalsAll(OBJECT_1, NULL_OBJECT));
         assertFalse(ObjectConditionUtils.equalsAll(OBJECT_1, NULL_OBJECT_ARRAY));
         assertFalse(ObjectConditionUtils.equalsAll(null, OBJECT_1));
@@ -55,7 +55,7 @@ class ObjectConditionUtilsTest {
     }
 
     @Test
-    void testEqualsAllObjectPositive() {
+    void testEqualsAllPositive() {
         assertTrue(ObjectConditionUtils.equalsAll(null, NULL_OBJECT));
         assertTrue(ObjectConditionUtils.equalsAll(null, NULL_OBJECT_ARRAY));
         assertTrue(ObjectConditionUtils.equalsAll(null, null, null));
@@ -64,7 +64,7 @@ class ObjectConditionUtilsTest {
     }
 
     @Test
-    void testEqualsAnyObjectNegative() {
+    void testEqualsAnyNegative() {
         assertFalse(ObjectConditionUtils.equalsAny(OBJECT_1));
         assertFalse(ObjectConditionUtils.equalsAny(null, OBJECT_1));
         assertFalse(ObjectConditionUtils.equalsAny(null, OBJECT_1, OBJECT_1));
@@ -77,7 +77,7 @@ class ObjectConditionUtilsTest {
     }
 
     @Test
-    void testEqualsAnyObjectPositive() {
+    void testEqualsAnyPositive() {
         assertTrue(ObjectConditionUtils.equalsAny(null));
         assertTrue(ObjectConditionUtils.equalsAny(null, NULL_OBJECT));
         assertTrue(ObjectConditionUtils.equalsAny(null, NULL_OBJECT_ARRAY));
@@ -91,7 +91,7 @@ class ObjectConditionUtilsTest {
     }
 
     @Test
-    void testEqualsNoneObjectNegative() {
+    void testEqualsNoneNegative() {
         assertFalse(ObjectConditionUtils.equalsNone(null));
         assertFalse(ObjectConditionUtils.equalsNone(null, NULL_OBJECT));
         assertFalse(ObjectConditionUtils.equalsNone(null, NULL_OBJECT_ARRAY));
@@ -104,7 +104,7 @@ class ObjectConditionUtilsTest {
     }
 
     @Test
-    void testEqualsNoneObjectPositive() {
+    void testEqualsNonePositive() {
         assertTrue(ObjectConditionUtils.equalsNone(null, OBJECT_1));
         assertTrue(ObjectConditionUtils.equalsNone(null, OBJECT_1, OBJECT_1));
         assertTrue(ObjectConditionUtils.equalsNone(OBJECT_1));
@@ -118,7 +118,7 @@ class ObjectConditionUtilsTest {
     }
 
     @Test
-    void testIsAnyNotNullObjectNegative() {
+    void testIsAnyNotNullNegative() {
         assertFalse(ObjectConditionUtils.isAnyNotNull());
         assertFalse(ObjectConditionUtils.isAnyNotNull(NULL_OBJECT));
         assertFalse(ObjectConditionUtils.isAnyNotNull(NULL_OBJECT_ARRAY));
@@ -126,7 +126,7 @@ class ObjectConditionUtilsTest {
     }
 
     @Test
-    void testIsAnyNotNullObjectPositive() {
+    void testIsAnyNotNullPositive() {
         assertTrue(ObjectConditionUtils.isAnyNotNull(OBJECT_1));
         assertTrue(ObjectConditionUtils.isAnyNotNull(OBJECT_1, OBJECT_1));
         assertTrue(ObjectConditionUtils.isAnyNotNull(null, OBJECT_1));
@@ -134,13 +134,13 @@ class ObjectConditionUtilsTest {
     }
 
     @Test
-    void testIsAnyNullObjectNegative() {
+    void testIsAnyNullNegative() {
         assertFalse(ObjectConditionUtils.isAnyNull(OBJECT_1));
         assertFalse(ObjectConditionUtils.isAnyNull(OBJECT_1, OBJECT_1));
     }
 
     @Test
-    void testIsAnyNullObjectPositive() {
+    void testIsAnyNullPositive() {
         assertTrue(ObjectConditionUtils.isAnyNull());
         assertTrue(ObjectConditionUtils.isAnyNull(NULL_OBJECT));
         assertTrue(ObjectConditionUtils.isAnyNull(NULL_OBJECT_ARRAY));

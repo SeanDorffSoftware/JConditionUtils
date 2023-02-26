@@ -14,23 +14,23 @@ class MapConditionUtilsTest {
     static final Map NULL_MAP = null;
 
     @Test
-    void testIsNotNullOrEmptyMapNegative() {
+    void testIsNotNullOrEmptyNegative() {
         assertFalse(MapConditionUtils.isNotNullOrEmpty(NULL_MAP));
         assertFalse(MapConditionUtils.isNotNullOrEmpty(EMPTY_MAP));
     }
 
     @Test
-    void testIsNotNullOrEmptyMapPositive() {
+    void testIsNotNullOrEmptyPositive() {
         assertTrue(MapConditionUtils.isNotNullOrEmpty(NON_EMPTY_MAP));
     }
 
     @Test
-    void testIsNullOrEmptyMapNegative() {
+    void testIsNullOrEmptyNegative() {
         assertFalse(MapConditionUtils.isNullOrEmpty(NON_EMPTY_MAP));
     }
 
     @Test
-    void testIsNullOrEmptyMapPositive() {
+    void testIsNullOrEmptyPositive() {
         assertTrue(MapConditionUtils.isNullOrEmpty(NULL_MAP));
         assertTrue(MapConditionUtils.isNullOrEmpty(EMPTY_MAP));
     }
