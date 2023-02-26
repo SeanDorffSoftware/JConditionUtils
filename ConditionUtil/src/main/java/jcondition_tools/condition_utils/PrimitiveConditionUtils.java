@@ -8,6 +8,8 @@ package jcondition_tools.condition_utils;
  * @version 1.0.0
  */
 public class PrimitiveConditionUtils {
+    public static final String BOUNDARY_ORDER_ARGUMENT_EXCEPTION = "lowerBoundary is greater than upperBoundary";
+
     /**
      * Only static methods. Hide constructor.
      */
@@ -143,6 +145,9 @@ public class PrimitiveConditionUtils {
      * @return {@code true} if {@code value} is greater than {@code lowerBoundary} and less than {@code upperBoundary}
      */
     public static boolean isBetween(byte value, byte lowerBoundary, byte upperBoundary) {
+        if (lowerBoundary > upperBoundary) {
+            throw new IllegalArgumentException(BOUNDARY_ORDER_ARGUMENT_EXCEPTION);
+        }
         return (lowerBoundary < value && value < upperBoundary);
     }
 
@@ -153,6 +158,9 @@ public class PrimitiveConditionUtils {
      * @return {@code true} if {@code value} is equal or greater than {@code lowerBoundary} and equal or less than {@code upperBoundary}
      */
     public static boolean isWithin(byte value, byte lowerBoundary, byte upperBoundary) {
+        if (lowerBoundary > upperBoundary) {
+            throw new IllegalArgumentException(BOUNDARY_ORDER_ARGUMENT_EXCEPTION);
+        }
         return (lowerBoundary <= value && value <= upperBoundary);
     }
 
@@ -224,6 +232,9 @@ public class PrimitiveConditionUtils {
      * @return {@code true} if {@code value} is greater than {@code lowerBoundary} and less than {@code upperBoundary}
      */
     public static boolean isBetween(char value, char lowerBoundary, char upperBoundary) {
+        if (lowerBoundary > upperBoundary) {
+            throw new IllegalArgumentException(BOUNDARY_ORDER_ARGUMENT_EXCEPTION);
+        }
         return (lowerBoundary < value && value < upperBoundary);
     }
 
@@ -234,6 +245,9 @@ public class PrimitiveConditionUtils {
      * @return {@code true} if {@code value} is equal or greater than {@code lowerBoundary} and equal or less than {@code upperBoundary}
      */
     public static boolean isWithin(char value, char lowerBoundary, char upperBoundary) {
+        if (lowerBoundary > upperBoundary) {
+            throw new IllegalArgumentException(BOUNDARY_ORDER_ARGUMENT_EXCEPTION);
+        }
         return (lowerBoundary <= value && value <= upperBoundary);
     }
 
@@ -305,6 +319,9 @@ public class PrimitiveConditionUtils {
      * @return {@code true} if {@code value} is greater than {@code lowerBoundary} and less than {@code upperBoundary}
      */
     public static boolean isBetween(double value, double lowerBoundary, double upperBoundary) {
+        if (lowerBoundary > upperBoundary) {
+            throw new IllegalArgumentException(BOUNDARY_ORDER_ARGUMENT_EXCEPTION);
+        }
         return (lowerBoundary < value && value < upperBoundary);
     }
 
@@ -315,6 +332,9 @@ public class PrimitiveConditionUtils {
      * @return {@code true} if {@code value} is equal or greater than {@code lowerBoundary} and equal or less than {@code upperBoundary}
      */
     public static boolean isWithin(double value, double lowerBoundary, double upperBoundary) {
+        if (lowerBoundary > upperBoundary) {
+            throw new IllegalArgumentException(BOUNDARY_ORDER_ARGUMENT_EXCEPTION);
+        }
         return (lowerBoundary <= value && value <= upperBoundary);
     }
     /*
@@ -385,6 +405,9 @@ public class PrimitiveConditionUtils {
      * @return {@code true} if {@code value} is greater than {@code lowerBoundary} and less than {@code upperBoundary}
      */
     public static boolean isBetween(float value, float lowerBoundary, float upperBoundary) {
+        if (lowerBoundary > upperBoundary) {
+            throw new IllegalArgumentException(BOUNDARY_ORDER_ARGUMENT_EXCEPTION);
+        }
         return (lowerBoundary < value && value < upperBoundary);
     }
 
@@ -395,6 +418,9 @@ public class PrimitiveConditionUtils {
      * @return {@code true} if {@code value} is equal or greater than {@code lowerBoundary} and equal or less than {@code upperBoundary}
      */
     public static boolean isWithin(float value, float lowerBoundary, float upperBoundary) {
+        if (lowerBoundary > upperBoundary) {
+            throw new IllegalArgumentException(BOUNDARY_ORDER_ARGUMENT_EXCEPTION);
+        }
         return (lowerBoundary <= value && value <= upperBoundary);
     }
 
@@ -466,6 +492,9 @@ public class PrimitiveConditionUtils {
      * @return {@code true} if {@code value} is greater than {@code lowerBoundary} and less than {@code upperBoundary}
      */
     public static boolean isBetween(int value, int lowerBoundary, int upperBoundary) {
+        if (lowerBoundary > upperBoundary) {
+            throw new IllegalArgumentException(BOUNDARY_ORDER_ARGUMENT_EXCEPTION);
+        }
         return (lowerBoundary < value && value < upperBoundary);
     }
 
@@ -476,6 +505,9 @@ public class PrimitiveConditionUtils {
      * @return {@code true} if {@code value} is equal or greater than {@code lowerBoundary} and equal or less than {@code upperBoundary}
      */
     public static boolean isWithin(int value, int lowerBoundary, int upperBoundary) {
+        if (lowerBoundary > upperBoundary) {
+            throw new IllegalArgumentException(BOUNDARY_ORDER_ARGUMENT_EXCEPTION);
+        }
         return (lowerBoundary <= value && value <= upperBoundary);
     }
 
@@ -547,6 +579,9 @@ public class PrimitiveConditionUtils {
      * @return {@code true} if {@code value} is greater than {@code lowerBoundary} and less than {@code upperBoundary}
      */
     public static boolean isBetween(long value, long lowerBoundary, long upperBoundary) {
+        if (lowerBoundary > upperBoundary) {
+            throw new IllegalArgumentException(BOUNDARY_ORDER_ARGUMENT_EXCEPTION);
+        }
         return (lowerBoundary < value && value < upperBoundary);
     }
 
@@ -557,6 +592,9 @@ public class PrimitiveConditionUtils {
      * @return {@code true} if {@code value} is equal or greater than {@code lowerBoundary} and equal or less than {@code upperBoundary}
      */
     public static boolean isWithin(long value, long lowerBoundary, long upperBoundary) {
+        if (lowerBoundary > upperBoundary) {
+            throw new IllegalArgumentException(BOUNDARY_ORDER_ARGUMENT_EXCEPTION);
+        }
         return (lowerBoundary <= value && value <= upperBoundary);
     }
 
@@ -628,6 +666,9 @@ public class PrimitiveConditionUtils {
      * @return {@code true} if {@code value} is greater than {@code lowerBoundary} and less than {@code upperBoundary}
      */
     public static boolean isBetween(short value, short lowerBoundary, short upperBoundary) {
+        if (lowerBoundary > upperBoundary) {
+            throw new IllegalArgumentException(BOUNDARY_ORDER_ARGUMENT_EXCEPTION);
+        }
         return (lowerBoundary < value && value < upperBoundary);
     }
 
@@ -638,6 +679,9 @@ public class PrimitiveConditionUtils {
      * @return {@code true} if {@code value} is equal or greater than {@code lowerBoundary} and equal or less than {@code upperBoundary}
      */
     public static boolean isWithin(short value, short lowerBoundary, short upperBoundary) {
+        if (lowerBoundary > upperBoundary) {
+            throw new IllegalArgumentException(BOUNDARY_ORDER_ARGUMENT_EXCEPTION);
+        }
         return (lowerBoundary <= value && value <= upperBoundary);
     }
 }

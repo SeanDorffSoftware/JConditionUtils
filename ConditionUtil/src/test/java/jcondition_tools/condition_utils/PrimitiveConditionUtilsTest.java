@@ -2,8 +2,7 @@ package jcondition_tools.condition_utils;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class PrimitiveConditionUtilsTest {
     static final byte BYTE_1 = 1;
@@ -134,6 +133,11 @@ class PrimitiveConditionUtilsTest {
     }
 
     @Test
+    void testIsBetweenByteIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(BYTE_1, BYTE_3, BYTE_2));
+    }
+
+    @Test
     void testIsBetweenByteNegative() {
         assertFalse(PrimitiveConditionUtils.isBetween(BYTE_1, BYTE_2, BYTE_3));
         assertFalse(PrimitiveConditionUtils.isBetween(BYTE_3, BYTE_1, BYTE_2));
@@ -142,6 +146,11 @@ class PrimitiveConditionUtilsTest {
     @Test
     void testIsBetweenBytePositive() {
         assertTrue(PrimitiveConditionUtils.isBetween(BYTE_2, BYTE_1, BYTE_3));
+    }
+
+    @Test
+    void testIsWithinByteIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(BYTE_1, BYTE_3, BYTE_2));
     }
 
     @Test
@@ -203,6 +212,11 @@ class PrimitiveConditionUtilsTest {
     }
 
     @Test
+    void testIsBetweenCharIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(CHAR_A, CHAR_C, CHAR_B));
+    }
+
+    @Test
     void testIsBetweenCharNegative() {
         assertFalse(PrimitiveConditionUtils.isBetween(CHAR_A, CHAR_B, CHAR_C));
         assertFalse(PrimitiveConditionUtils.isBetween(CHAR_C, CHAR_A, CHAR_B));
@@ -211,6 +225,11 @@ class PrimitiveConditionUtilsTest {
     @Test
     void testIsBetweenCharPositive() {
         assertTrue(PrimitiveConditionUtils.isBetween(CHAR_B, CHAR_A, CHAR_C));
+    }
+
+    @Test
+    void testIsWithinCharIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(CHAR_A, CHAR_C, CHAR_B));
     }
 
     @Test
@@ -272,6 +291,11 @@ class PrimitiveConditionUtilsTest {
     }
 
     @Test
+    void testIsBetweenDoubleIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(DOUBLE_1, DOUBLE_3, DOUBLE_2));
+    }
+
+    @Test
     void testIsBetweenDoubleNegative() {
         assertFalse(PrimitiveConditionUtils.isBetween(DOUBLE_1, DOUBLE_2, DOUBLE_3));
         assertFalse(PrimitiveConditionUtils.isBetween(DOUBLE_3, DOUBLE_1, DOUBLE_2));
@@ -280,6 +304,11 @@ class PrimitiveConditionUtilsTest {
     @Test
     void testIsBetweenDoublePositive() {
         assertTrue(PrimitiveConditionUtils.isBetween(DOUBLE_2, DOUBLE_1, DOUBLE_3));
+    }
+
+    @Test
+    void testIsWithinDoubleIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(DOUBLE_1, DOUBLE_3, DOUBLE_2));
     }
 
     @Test
@@ -341,6 +370,11 @@ class PrimitiveConditionUtilsTest {
     }
 
     @Test
+    void testIsBetweenFloatIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(FLOAT_1, FLOAT_3, FLOAT_2));
+    }
+
+    @Test
     void testIsBetweenFloatNegative() {
         assertFalse(PrimitiveConditionUtils.isBetween(FLOAT_1, FLOAT_2, FLOAT_3));
         assertFalse(PrimitiveConditionUtils.isBetween(FLOAT_3, FLOAT_1, FLOAT_2));
@@ -349,6 +383,11 @@ class PrimitiveConditionUtilsTest {
     @Test
     void testIsBetweenFloatPositive() {
         assertTrue(PrimitiveConditionUtils.isBetween(FLOAT_2, FLOAT_1, FLOAT_3));
+    }
+
+    @Test
+    void testIsWithinFloatIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(FLOAT_1, FLOAT_3, FLOAT_2));
     }
 
     @Test
@@ -409,6 +448,11 @@ class PrimitiveConditionUtilsTest {
     }
 
     @Test
+    void testIsBetweenIntIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(INT_1, INT_3, INT_2));
+    }
+
+    @Test
     void testIsBetweenIntNegative() {
         assertFalse(PrimitiveConditionUtils.isBetween(INT_1, INT_2, INT_3));
         assertFalse(PrimitiveConditionUtils.isBetween(INT_3, INT_1, INT_2));
@@ -417,6 +461,11 @@ class PrimitiveConditionUtilsTest {
     @Test
     void testIsBetweenIntPositive() {
         assertTrue(PrimitiveConditionUtils.isBetween(INT_2, INT_1, INT_3));
+    }
+
+    @Test
+    void testIsWithinIntIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(INT_1, INT_3, INT_2));
     }
 
     @Test
@@ -478,6 +527,11 @@ class PrimitiveConditionUtilsTest {
     }
 
     @Test
+    void testIsBetweenLongIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(LONG_1, LONG_3, LONG_2));
+    }
+
+    @Test
     void testIsBetweenLongNegative() {
         assertFalse(PrimitiveConditionUtils.isBetween(LONG_1, LONG_2, LONG_3));
         assertFalse(PrimitiveConditionUtils.isBetween(LONG_3, LONG_1, LONG_2));
@@ -486,6 +540,11 @@ class PrimitiveConditionUtilsTest {
     @Test
     void testIsBetweenLongPositive() {
         assertTrue(PrimitiveConditionUtils.isBetween(LONG_2, LONG_1, LONG_3));
+    }
+
+    @Test
+    void testIsWithinLongIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(LONG_1, LONG_3, LONG_2));
     }
 
     @Test
@@ -547,6 +606,11 @@ class PrimitiveConditionUtilsTest {
     }
 
     @Test
+    void testIsBetweenShortIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(SHORT_1, SHORT_3, SHORT_2));
+    }
+
+    @Test
     void testIsBetweenShortNegative() {
         assertFalse(PrimitiveConditionUtils.isBetween(SHORT_1, SHORT_2, SHORT_3));
         assertFalse(PrimitiveConditionUtils.isBetween(SHORT_3, SHORT_1, SHORT_2));
@@ -555,6 +619,11 @@ class PrimitiveConditionUtilsTest {
     @Test
     void testIsBetweenShortPositive() {
         assertTrue(PrimitiveConditionUtils.isBetween(SHORT_2, SHORT_1, SHORT_3));
+    }
+
+    @Test
+    void testIsWithinShortIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(SHORT_1, SHORT_3, SHORT_2));
     }
 
     @Test
