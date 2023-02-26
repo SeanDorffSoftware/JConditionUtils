@@ -1,25 +1,18 @@
 package jcondition_tools.condition_utils;
 
-import java.util.List;
-import java.util.Map;
-
 /**
- * ConditionUtils
+ * ObjectConditionUtils
  * Provides static methods for common conditions.
  *
  * @author Friedemann Metschies
  * @version 1.0.0
  */
-public class ConditionUtils {
+public class ObjectConditionUtils {
     /**
      * Only static methods. Hide constructor.
      */
-    private ConditionUtils() {
+    private ObjectConditionUtils() {
     }
-
-    /*
-    Objects section
-     */
 
     /**
      * @param objects to be checked
@@ -160,45 +153,5 @@ public class ConditionUtils {
         }
 
         return false;
-    }
-
-    /*
-    List section
-     */
-
-    /**
-     * @param list to be checked
-     * @return {@code true} if {@code list} is not {@code null} or empty
-     */
-    public static <E> boolean isNotNullOrEmpty(List<E> list) {
-        return (list != null && !list.isEmpty());
-    }
-
-    /**
-     * @param list to be checked
-     * @return {@code true} if {@code list} is {@code null} or empty
-     */
-    public static <E> boolean isNullOrEmpty(List<E> list) {
-        return (list == null || list.isEmpty());
-    }
-
-    /*
-    Map section
-     */
-
-    /**
-     * @param map to be checked
-     * @return {@code true} if {@code map} is not {@code null} or empty
-     */
-    public static <K, V> boolean isNotNullOrEmpty(Map<K, V> map) {
-        return (map != null && !map.isEmpty());
-    }
-
-    /**
-     * @param map to be checked
-     * @return {@code true} if {@code map} is {@code null} or empty
-     */
-    public static <K, V> boolean isNullOrEmpty(Map<K, V> map) {
-        return (map == null || map.isEmpty());
     }
 }
