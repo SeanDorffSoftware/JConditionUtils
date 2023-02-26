@@ -134,7 +134,8 @@ class PrimitiveConditionUtilsTest {
 
     @Test
     void testIsBetweenByteIllegalArgumentException() {
-        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(BYTE_1, BYTE_3, BYTE_2));
+        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(BYTE_1, BYTE_3, BYTE_2));
+        assertEquals(PrimitiveConditionUtils.BOUNDARY_ORDER_ARGUMENT_EXCEPTION, illegalArgumentException.getMessage());
     }
 
     @Test
@@ -150,7 +151,8 @@ class PrimitiveConditionUtilsTest {
 
     @Test
     void testIsWithinByteIllegalArgumentException() {
-        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(BYTE_1, BYTE_3, BYTE_2));
+        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(BYTE_1, BYTE_3, BYTE_2));
+        assertEquals(PrimitiveConditionUtils.BOUNDARY_ORDER_ARGUMENT_EXCEPTION, illegalArgumentException.getMessage());
     }
 
     @Test
@@ -213,7 +215,8 @@ class PrimitiveConditionUtilsTest {
 
     @Test
     void testIsBetweenCharIllegalArgumentException() {
-        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(CHAR_A, CHAR_C, CHAR_B));
+        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(CHAR_A, CHAR_C, CHAR_B));
+        assertEquals(PrimitiveConditionUtils.BOUNDARY_ORDER_ARGUMENT_EXCEPTION, illegalArgumentException.getMessage());
     }
 
     @Test
@@ -229,7 +232,8 @@ class PrimitiveConditionUtilsTest {
 
     @Test
     void testIsWithinCharIllegalArgumentException() {
-        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(CHAR_A, CHAR_C, CHAR_B));
+        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(CHAR_A, CHAR_C, CHAR_B));
+        assertEquals(PrimitiveConditionUtils.BOUNDARY_ORDER_ARGUMENT_EXCEPTION, illegalArgumentException.getMessage());
     }
 
     @Test
@@ -292,7 +296,8 @@ class PrimitiveConditionUtilsTest {
 
     @Test
     void testIsBetweenDoubleIllegalArgumentException() {
-        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(DOUBLE_1, DOUBLE_3, DOUBLE_2));
+        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(DOUBLE_1, DOUBLE_3, DOUBLE_2));
+        assertEquals(PrimitiveConditionUtils.BOUNDARY_ORDER_ARGUMENT_EXCEPTION, illegalArgumentException.getMessage());
     }
 
     @Test
@@ -308,7 +313,8 @@ class PrimitiveConditionUtilsTest {
 
     @Test
     void testIsWithinDoubleIllegalArgumentException() {
-        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(DOUBLE_1, DOUBLE_3, DOUBLE_2));
+        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(DOUBLE_1, DOUBLE_3, DOUBLE_2));
+        assertEquals(PrimitiveConditionUtils.BOUNDARY_ORDER_ARGUMENT_EXCEPTION, illegalArgumentException.getMessage());
     }
 
     @Test
@@ -371,7 +377,8 @@ class PrimitiveConditionUtilsTest {
 
     @Test
     void testIsBetweenFloatIllegalArgumentException() {
-        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(FLOAT_1, FLOAT_3, FLOAT_2));
+        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(FLOAT_1, FLOAT_3, FLOAT_2));
+        assertEquals(PrimitiveConditionUtils.BOUNDARY_ORDER_ARGUMENT_EXCEPTION, illegalArgumentException.getMessage());
     }
 
     @Test
@@ -387,7 +394,8 @@ class PrimitiveConditionUtilsTest {
 
     @Test
     void testIsWithinFloatIllegalArgumentException() {
-        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(FLOAT_1, FLOAT_3, FLOAT_2));
+        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(FLOAT_1, FLOAT_3, FLOAT_2));
+        assertEquals(PrimitiveConditionUtils.BOUNDARY_ORDER_ARGUMENT_EXCEPTION, illegalArgumentException.getMessage());
     }
 
     @Test
@@ -449,7 +457,8 @@ class PrimitiveConditionUtilsTest {
 
     @Test
     void testIsBetweenIntIllegalArgumentException() {
-        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(INT_1, INT_3, INT_2));
+        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(INT_1, INT_3, INT_2));
+        assertEquals(PrimitiveConditionUtils.BOUNDARY_ORDER_ARGUMENT_EXCEPTION, illegalArgumentException.getMessage());
     }
 
     @Test
@@ -465,7 +474,8 @@ class PrimitiveConditionUtilsTest {
 
     @Test
     void testIsWithinIntIllegalArgumentException() {
-        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(INT_1, INT_3, INT_2));
+        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(INT_1, INT_3, INT_2));
+        assertEquals(PrimitiveConditionUtils.BOUNDARY_ORDER_ARGUMENT_EXCEPTION, illegalArgumentException.getMessage());
     }
 
     @Test
@@ -528,7 +538,8 @@ class PrimitiveConditionUtilsTest {
 
     @Test
     void testIsBetweenLongIllegalArgumentException() {
-        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(LONG_1, LONG_3, LONG_2));
+        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(LONG_1, LONG_3, LONG_2));
+        assertEquals(PrimitiveConditionUtils.BOUNDARY_ORDER_ARGUMENT_EXCEPTION, illegalArgumentException.getMessage());
     }
 
     @Test
@@ -544,7 +555,8 @@ class PrimitiveConditionUtilsTest {
 
     @Test
     void testIsWithinLongIllegalArgumentException() {
-        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(LONG_1, LONG_3, LONG_2));
+        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(LONG_1, LONG_3, LONG_2));
+        assertEquals(PrimitiveConditionUtils.BOUNDARY_ORDER_ARGUMENT_EXCEPTION, illegalArgumentException.getMessage());
     }
 
     @Test
@@ -607,7 +619,8 @@ class PrimitiveConditionUtilsTest {
 
     @Test
     void testIsBetweenShortIllegalArgumentException() {
-        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(SHORT_1, SHORT_3, SHORT_2));
+        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isBetween(SHORT_1, SHORT_3, SHORT_2));
+        assertEquals(PrimitiveConditionUtils.BOUNDARY_ORDER_ARGUMENT_EXCEPTION, illegalArgumentException.getMessage());
     }
 
     @Test
@@ -623,7 +636,8 @@ class PrimitiveConditionUtilsTest {
 
     @Test
     void testIsWithinShortIllegalArgumentException() {
-        assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(SHORT_1, SHORT_3, SHORT_2));
+        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class, () -> PrimitiveConditionUtils.isWithin(SHORT_1, SHORT_3, SHORT_2));
+        assertEquals(PrimitiveConditionUtils.BOUNDARY_ORDER_ARGUMENT_EXCEPTION, illegalArgumentException.getMessage());
     }
 
     @Test
