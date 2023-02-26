@@ -22,7 +22,7 @@ if (object1 != null && object2 != null && object3 != null) {
 With Java Condition Tools your code can look like this.
 
 <pre>
-if (ConditionUtils.<i>areNotNull</i>(object1, object2, object3) {
+if (ObjectConditionUtils.<i>areNotNull</i>(object1, object2, object3) {
   // execute something
 }
 </pre>
@@ -39,8 +39,8 @@ if (!object1.equals(object2) && !object1.equals(object3) && !object1.equals(obje
 With Java Condition Tools your code can look like this.
 
 <pre>
-if (ConditionUtils.<i>equalsNone</i>(object1, object2, object3, object4) {
-  // execute somthing
+if (ObjectConditionUtils.<i>equalsNone</i>(object1, object2, object3, object4) {
+  // execute something
 }
 </pre>
 
