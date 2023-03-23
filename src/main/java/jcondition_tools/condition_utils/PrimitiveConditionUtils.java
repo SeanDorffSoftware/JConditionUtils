@@ -337,6 +337,7 @@ public class PrimitiveConditionUtils {
         }
         return (lowerBoundary <= value && value <= upperBoundary);
     }
+
     /*
     float section
      */
