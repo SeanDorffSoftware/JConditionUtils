@@ -30,8 +30,8 @@ public class PrimitiveConditionUtils {
             return false;
         }
 
-        for (boolean comparison : comparisons) {
-            if (value != comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value != comparisons[i]) {
                 return false;
             }
         }
@@ -49,8 +49,8 @@ public class PrimitiveConditionUtils {
             return false;
         }
 
-        for (boolean comparison : comparisons) {
-            if (value == comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value == comparisons[i]) {
                 return true;
             }
         }
@@ -68,8 +68,8 @@ public class PrimitiveConditionUtils {
             return true;
         }
 
-        for (boolean comparison : comparisons) {
-            if (value == comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value == comparisons[i]) {
                 return false;
             }
         }
@@ -91,8 +91,8 @@ public class PrimitiveConditionUtils {
             return false;
         }
 
-        for (byte comparison : comparisons) {
-            if (value != comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value != comparisons[i]) {
                 return false;
             }
         }
@@ -110,8 +110,8 @@ public class PrimitiveConditionUtils {
             return false;
         }
 
-        for (byte comparison : comparisons) {
-            if (value == comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value == comparisons[i]) {
                 return true;
             }
         }
@@ -129,8 +129,8 @@ public class PrimitiveConditionUtils {
             return true;
         }
 
-        for (byte comparison : comparisons) {
-            if (value == comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value == comparisons[i]) {
                 return false;
             }
         }
@@ -178,8 +178,8 @@ public class PrimitiveConditionUtils {
             return false;
         }
 
-        for (char comparison : comparisons) {
-            if (value != comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value != comparisons[i]) {
                 return false;
             }
         }
@@ -197,8 +197,8 @@ public class PrimitiveConditionUtils {
             return false;
         }
 
-        for (char comparison : comparisons) {
-            if (value == comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value == comparisons[i]) {
                 return true;
             }
         }
@@ -216,8 +216,8 @@ public class PrimitiveConditionUtils {
             return true;
         }
 
-        for (char comparison : comparisons) {
-            if (value == comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value == comparisons[i]) {
                 return false;
             }
         }
@@ -265,8 +265,8 @@ public class PrimitiveConditionUtils {
             return false;
         }
 
-        for (double comparison : comparisons) {
-            if (value != comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value != comparisons[i]) {
                 return false;
             }
         }
@@ -284,8 +284,8 @@ public class PrimitiveConditionUtils {
             return false;
         }
 
-        for (double comparison : comparisons) {
-            if (value == comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value == comparisons[i]) {
                 return true;
             }
         }
@@ -303,8 +303,8 @@ public class PrimitiveConditionUtils {
             return true;
         }
 
-        for (double comparison : comparisons) {
-            if (value == comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value == comparisons[i]) {
                 return false;
             }
         }
@@ -352,8 +352,8 @@ public class PrimitiveConditionUtils {
             return false;
         }
 
-        for (float comparison : comparisons) {
-            if (value != comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value != comparisons[i]) {
                 return false;
             }
         }
@@ -371,8 +371,8 @@ public class PrimitiveConditionUtils {
             return false;
         }
 
-        for (float comparison : comparisons) {
-            if (value == comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value == comparisons[i]) {
                 return true;
             }
         }
@@ -390,8 +390,8 @@ public class PrimitiveConditionUtils {
             return true;
         }
 
-        for (float comparison : comparisons) {
-            if (value == comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value == comparisons[i]) {
                 return false;
             }
         }
@@ -439,8 +439,8 @@ public class PrimitiveConditionUtils {
             return false;
         }
 
-        for (int comparison : comparisons) {
-            if (value != comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value != comparisons[i]) {
                 return false;
             }
         }
@@ -458,8 +458,8 @@ public class PrimitiveConditionUtils {
             return false;
         }
 
-        for (int comparison : comparisons) {
-            if (value == comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value == comparisons[i]) {
                 return true;
             }
         }
@@ -477,8 +477,8 @@ public class PrimitiveConditionUtils {
             return true;
         }
 
-        for (int comparison : comparisons) {
-            if (value == comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value == comparisons[i]) {
                 return false;
             }
         }
@@ -526,8 +526,8 @@ public class PrimitiveConditionUtils {
             return false;
         }
 
-        for (long comparison : comparisons) {
-            if (value != comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value != comparisons[i]) {
                 return false;
             }
         }
@@ -545,8 +545,8 @@ public class PrimitiveConditionUtils {
             return false;
         }
 
-        for (long comparison : comparisons) {
-            if (value == comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value == comparisons[i]) {
                 return true;
             }
         }
@@ -564,8 +564,8 @@ public class PrimitiveConditionUtils {
             return true;
         }
 
-        for (long comparison : comparisons) {
-            if (value == comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value == comparisons[i]) {
                 return false;
             }
         }
@@ -613,8 +613,8 @@ public class PrimitiveConditionUtils {
             return false;
         }
 
-        for (short comparison : comparisons) {
-            if (value != comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value != comparisons[i]) {
                 return false;
             }
         }
@@ -632,8 +632,8 @@ public class PrimitiveConditionUtils {
             return false;
         }
 
-        for (short comparison : comparisons) {
-            if (value == comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value == comparisons[i]) {
                 return true;
             }
         }
@@ -651,8 +651,8 @@ public class PrimitiveConditionUtils {
             return true;
         }
 
-        for (short comparison : comparisons) {
-            if (value == comparison) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value == comparisons[i]) {
                 return false;
             }
         }

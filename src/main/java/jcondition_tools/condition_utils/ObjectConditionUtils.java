@@ -23,8 +23,8 @@ public class ObjectConditionUtils {
             return false;
         }
 
-        for (Object object : objects) {
-            if (object == null) {
+        for (int i = 0, objectsLength = objects.length; i < objectsLength; i++) {
+            if (objects[i] == null) {
                 return false;
             }
         }
@@ -41,8 +41,8 @@ public class ObjectConditionUtils {
             return true;
         }
 
-        for (Object object : objects) {
-            if (object != null) {
+        for (int i = 0, objectsLength = objects.length; i < objectsLength; i++) {
+            if (objects[i] != null) {
                 return false;
             }
         }
@@ -64,8 +64,8 @@ public class ObjectConditionUtils {
             return false;
         }
 
-        for (Object comparison : comparisons) {
-            if (!value.equals(comparison)) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (!value.equals(comparisons[i])) {
                 return false;
             }
         }
@@ -87,8 +87,8 @@ public class ObjectConditionUtils {
             return false;
         }
 
-        for (Object comparison : comparisons) {
-            if (value.equals(comparison)) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value.equals(comparisons[i])) {
                 return true;
             }
         }
@@ -110,8 +110,8 @@ public class ObjectConditionUtils {
             return true;
         }
 
-        for (Object comparison : comparisons) {
-            if (value.equals(comparison)) {
+        for (int i = 0, comparisonsLength = comparisons.length; i < comparisonsLength; i++) {
+            if (value.equals(comparisons[i])) {
                 return false;
             }
         }
@@ -128,8 +128,8 @@ public class ObjectConditionUtils {
             return false;
         }
 
-        for (Object object : objects) {
-            if (object != null) {
+        for (int i = 0, objectsLength = objects.length; i < objectsLength; i++) {
+            if (objects[i] != null) {
                 return true;
             }
         }
@@ -146,8 +146,8 @@ public class ObjectConditionUtils {
             return true;
         }
 
-        for (Object object : objects) {
-            if (object == null) {
+        for (int i = 0, objectsLength = objects.length; i < objectsLength; i++) {
+            if (objects[i] == null) {
                 return true;
             }
         }
