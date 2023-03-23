@@ -16,10 +16,6 @@ public class ListConditionUtils {
     private ListConditionUtils() {
     }
 
-       /*
-    List section
-     */
-
     /**
      * @param list to be checked
      * @return {@code true} if {@code list} is not {@code null} or empty
