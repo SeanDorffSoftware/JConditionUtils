@@ -32,3 +32,8 @@ jobs:
             target/*.jar
             bom.xml
             bom.json
+      - name: Archive JavaDoc
+        uses: actions/upload-artifac@v3
+        with:
+          name: java-doc-artifacts
+          path: target/site/apidocs
