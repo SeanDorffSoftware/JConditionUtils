@@ -29,6 +29,6 @@ jobs:
         with:
           name: maven-build-artifacts
           path: | # Archive build artifacts and SBOM files
-            target/
+            target/*.jar
             bom.xml
             bom.json
