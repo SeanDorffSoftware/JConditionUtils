@@ -18,17 +18,19 @@ public class CollectionConditionUtils {
 
     /**
      * @param collection to be checked
+     * @param <T>        type
      * @return {@code true} if {@code collection} is not {@code null} or empty
      */
-    public static <E> boolean isNotNullOrEmpty(Collection<E> collection) {
+    public static <T> boolean isNotNullOrEmpty(Collection<T> collection) {
         return (collection != null && !collection.isEmpty());
     }
 
     /**
      * @param collection to be checked
+     * @param <T>        type
      * @return {@code true} if {@code collection} is {@code null} or empty
      */
-    public static <E> boolean isNullOrEmpty(Collection<E> collection) {
+    public static <T> boolean isNullOrEmpty(Collection<T> collection) {
         return (collection == null || collection.isEmpty());
     }
 }

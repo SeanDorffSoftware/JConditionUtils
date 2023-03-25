@@ -19,25 +19,28 @@ public class ArrayConditionUtils {
 
     /**
      * @param array to be checked
+     * @param <T>   type
      * @return {@code true} if {@code array} is not {@code null} or empty
      */
-    public static <E> boolean isNotNullOrEmpty(E[] array) {
+    public static <T> boolean isNotNullOrEmpty(T[] array) {
         return (array != null && array.length != 0);
     }
 
     /**
      * @param array to be checked
+     * @param <T>   type
      * @return {@code true} if {@code array} is {@code null} or empty
      */
-    public static <E> boolean isNullOrEmpty(E[] array) {
+    public static <T> boolean isNullOrEmpty(T[] array) {
         return (array == null || array.length == 0);
     }
 
     /**
      * @param array to be checked
+     * @param <T>   type
      * @return {@code true} if all elements in {@code array} are not {@code null}
      */
-    public static <E> boolean areAllElementsNotNull(E[] array) {
+    public static <T> boolean areAllElementsNotNull(T[] array) {
         if (isNullOrEmpty(array)) {
             return false;
         }
@@ -53,9 +56,10 @@ public class ArrayConditionUtils {
 
     /**
      * @param array to be checked
+     * @param <T>   type
      * @return {@code true} if any element in {@code array} is {@code null}
      */
-    public static <E> boolean isAnyElementNull(E[] array) {
+    public static <T> boolean isAnyElementNull(T[] array) {
         if (isNullOrEmpty(array)) {
             return false;
         }
@@ -72,9 +76,10 @@ public class ArrayConditionUtils {
     /**
      * @param array    to be checked
      * @param elements to be searched
+     * @param <T>      type
      * @return {@code true} if {@code array} contains all {@code elements}
      */
-    public static <E> boolean containsAll(E[] array, E... elements) {
+    public static <T> boolean containsAll(T[] array, T... elements) {
         if (isNullOrEmpty(elements)) {
             return true;
         }
@@ -83,7 +88,7 @@ public class ArrayConditionUtils {
             return false;
         }
 
-        List<E> arrayAsList = Arrays.asList(array);
+        List<T> arrayAsList = Arrays.asList(array);
         for (int i = 0, elementsLength = elements.length; i < elementsLength; i++) {
             if (!arrayAsList.contains(elements[i])) {
                 return false;
@@ -96,9 +101,10 @@ public class ArrayConditionUtils {
     /**
      * @param array    to be checked
      * @param elements to be searched
+     * @param <T>      type
      * @return {@code true} if {@code array} contains at least one element from {@code elements}
      */
-    public static <E> boolean containsAny(E[] array, E... elements) {
+    public static <T> boolean containsAny(T[] array, T... elements) {
         if (isNullOrEmpty(elements)) {
             return false;
         }
@@ -107,7 +113,7 @@ public class ArrayConditionUtils {
             return false;
         }
 
-        List<E> arrayAsList = Arrays.asList(array);
+        List<T> arrayAsList = Arrays.asList(array);
         for (int i = 0, elementsLength = elements.length; i < elementsLength; i++) {
             if (arrayAsList.contains(elements[i])) {
                 return true;
@@ -120,9 +126,10 @@ public class ArrayConditionUtils {
     /**
      * @param array    to be checked
      * @param elements to be searched
+     * @param <T>      type
      * @return {@code true} if {@code array} contains none of the elements in {@code elements}
      */
-    public static <E> boolean containsNone(E[] array, E... elements) {
+    public static <T> boolean containsNone(T[] array, T... elements) {
         if (isNullOrEmpty(elements)) {
             return true;
         }
@@ -131,7 +138,7 @@ public class ArrayConditionUtils {
             return true;
         }
 
-        List<E> arrayAsList = Arrays.asList(array);
+        List<T> arrayAsList = Arrays.asList(array);
         for (int i = 0, elementsLength = elements.length; i < elementsLength; i++) {
             if (arrayAsList.contains(elements[i])) {
                 return false;
