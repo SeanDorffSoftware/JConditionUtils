@@ -27,12 +27,12 @@ jobs:
       - name: Archive Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: maven-build-artifacts
+          name: JAR with sources and SBOMs
           path: | # Archive build artifacts and SBOM files
             target/*.jar
             target/bom.xml
             target/bom.json
-      - name: Archive JavaDoc
+      - name: JavaDoc
         uses: actions/upload-artifact@v3
         with:
           name: java-doc-artifacts
