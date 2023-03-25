@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: maven-build-artifacts
-          path: |
-            target/ # include the target directory
-            bom.xml # include the generated SBOM files
-            bom.json # include the generated SBOM files
+          path: | # Archive build artifacts and SBOM files
+            target/
+            bom.xml
+            bom.json
