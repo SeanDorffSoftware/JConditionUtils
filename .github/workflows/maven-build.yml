@@ -26,4 +26,4 @@ jobs:
       - name: Generate CycloneDX SBOM
         run: mvn cyclonedx:makeAggregateBom
       - name: Generate SPDX SBOM
-        run: mvn spdx:create
+        run: mvn spdx:createSPDX
