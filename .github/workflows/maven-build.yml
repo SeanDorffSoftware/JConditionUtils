@@ -30,8 +30,8 @@ jobs:
           name: maven-build-artifacts
           path: | # Archive build artifacts and SBOM files
             target/*.jar
-            bom.xml
-            bom.json
+            target/bom.xml
+            target/bom.json
       - name: Archive JavaDoc
         uses: actions/upload-artifact@v3
         with:
