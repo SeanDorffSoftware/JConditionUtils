@@ -6,6 +6,9 @@ on:
       - mainline
   workflow_dispatch:
 
+env:
+  CYCLONE_DX_REPORT_FILE: cyclonedx-report.json
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -60,9 +63,9 @@ jobs:
       - name: Run CycloneDX CLI
         uses: docker://cyclonedx/cyclonedx-cli:latest
         with:
-          args: analyze --input-file bom.xml --output-format json --output-file cyclonedx-report.json
+          args: analyze --input-file bom.xml --output-format json --output-file $CYCLONE_DX_REPORT_FILE
       - name: Save CycloneDX report as artifact
         uses: actions/upload-artifact@v3
         with:
           name: Cyclone DX report
-          path: cyclonedx-report.json
+          path: $CYCLONE_DX_REPORT_FILE
