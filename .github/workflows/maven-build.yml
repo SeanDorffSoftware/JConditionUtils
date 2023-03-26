@@ -64,7 +64,7 @@ jobs:
         #        uses: docker://cyclonedx/cyclonedx-cli:latest
         #        with:
         #          args: analyze --input-file bom.xml --output-format json --output-file $CYCLONE_DX_REPORT_FILE
-        run: docker run --rm -v "$(pwd)":/workspace cyclonedx/cyclonedx-cli:latest analyze --input-file /workspace/bom.xml --output-format json > ${{ CYCLONE_DX_REPORT_FILE }}
+        run: docker run --rm -v "$(pwd)":/workspace cyclonedx/cyclonedx-cli:latest analyze --input-file /workspace/bom.xml --output-format json > ${{ env.CYCLONE_DX_REPORT_FILE }}
       - name: Save CycloneDX report as artifact
         uses: actions/upload-artifact@v3
         with:
