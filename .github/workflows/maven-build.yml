@@ -50,6 +50,7 @@ jobs:
             target/site/surefire-report.html
             target/surefire-reports/*.xml
   cyclonedx:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Run CycloneDX CLI
