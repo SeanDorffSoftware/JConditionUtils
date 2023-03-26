@@ -17,26 +17,31 @@
             <groupId>org.apache.maven.reporting</groupId>
             <artifactId>maven-reporting-impl</artifactId>
             <version>3.0.0</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.maven.doxia</groupId>
             <artifactId>doxia-sink-api</artifactId>
             <version>1.7</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.maven.doxia</groupId>
             <artifactId>doxia-site-renderer</artifactId>
             <version>1.7.5</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.maven.doxia</groupId>
             <artifactId>doxia-core</artifactId>
             <version>1.7</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.maven.doxia</groupId>
             <artifactId>doxia-module-apt</artifactId>
             <version>1.7</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.maven.doxia</groupId>
@@ -47,26 +52,31 @@
             <groupId>org.apache.maven.doxia</groupId>
             <artifactId>doxia-module-xdoc</artifactId>
             <version>1.7</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.maven.doxia</groupId>
             <artifactId>doxia-module-xhtml</artifactId>
             <version>1.7</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.codehaus.plexus</groupId>
             <artifactId>plexus-container-default</artifactId>
             <version>2.1.1</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.codehaus.plexus</groupId>
             <artifactId>plexus-resources</artifactId>
             <version>1.1.0</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
             <version>2.6</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <properties>
