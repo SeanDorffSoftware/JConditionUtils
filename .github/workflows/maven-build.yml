@@ -60,7 +60,7 @@ jobs:
       - name: Run CycloneDX CLI
         uses: docker://cyclonedx/cyclonedx-cli:latest
         with:
-          args: analyze --input-file /github/workspace/bom.xml --output-format json --output-file report.json
+          args: "analyze --input-file /github/workspace/bom.xml --output-format json > report.json"
       - name: Save CycloneDX report as artifact
         uses: actions/upload-artifact@v3
         with:
