@@ -53,10 +53,14 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Download BOM artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: BOM
       - name: Run CycloneDX CLI
         uses: docker://cyclonedx/cyclonedx-cli:latest
         with:
-          args: analyze --input-file /github/workspace/target/bom.xml --output-format json
+          args: analyze --input-file /github/workspace/bom.xml --output-format json
       - name: Save CycloneDX report as artifact
         uses: actions/upload-artifact@v3
         with:
