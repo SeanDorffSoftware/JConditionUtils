@@ -69,4 +69,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Cyclone DX report
-          path: ${{ CYCLONE_DX_REPORT_FILE }}
+          path: ${{ env.CYCLONE_DX_REPORT_FILE }}
