@@ -32,8 +32,15 @@ jobs:
             target/*.jar
             target/bom.xml
             target/bom.json
-      - name: JavaDoc
+      - name: Archive JavaDoc
         uses: actions/upload-artifact@v3
         with:
-          name: java-doc-artifacts
+          name: JavaDoc
           path: target/site/apidocs
+      - name: Archive test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: Test results
+          path: |
+            target/site/surefire-report.html
+            target/surefire-reports/*.xml
