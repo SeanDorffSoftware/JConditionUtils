@@ -7,7 +7,12 @@ on:
   workflow_dispatch:
 
 env:
-  CYCLONE_DX_REPORT_FILE: cyclonedx-report.json
+  ARTIFACT_NAME_BOM: SBOM
+  ARTIFACT_NAME_CYCLONE_DX_REPORT: CycloneDX Report
+  ARTIFACT_NAME_JAR: JAR (With Sources and SBOM)
+  ARTIFACT_NAME_JAVADOC: JavaDoc
+  ARTIFACT_NAME_TEST_RESULTS: Test Results
+  FILE_CYCLONE_DX_REPORT: cyclonedx-report.json
 
 jobs:
   build:
@@ -25,30 +30,29 @@ jobs:
           settings-path: ${{ github.workspace }} # location for the settings.xml file
       - name: Build with Maven
         run: mvn -B clean install test package
-      - name: Generate CycloneDX SBOM
+      - name: Generate CycloneDX ${{ env.ARTIFACT_NAME_BOM }}
         run: mvn cyclonedx:makeBom
-      - name: Archive Artifacts
+      - name: Archive ${{ env.ARTIFACT_NAME_JAR }}
         uses: actions/upload-artifact@v3
         with:
-          name: JAR with sources
+          name: ${{ env.ARTIFACT_NAME_JAR }}
           path: |
             target/*.jar
-            target/bom.xml
-            target/bom.json
-      - name: Archive BOM
+            target/bom.*
+      - name: Archive ${{ env.ARTIFACT_NAME_BOM }}
         uses: actions/upload-artifact@v3
         with:
-          name: BOM
+          name: ${{ env.ARTIFACT_NAME_BOM }}
           path: target/bom.*
-      - name: Archive JavaDoc
+      - name: Archive ${{ env.ARTIFACT_NAME_JAVADOC }}
         uses: actions/upload-artifact@v3
         with:
-          name: JavaDoc
+          name: ${{ env.ARTIFACT_NAME_JAVADOC }}
           path: target/site/apidocs
-      - name: Archive test results
+      - name: Archive ${{ env.ARTIFACT_NAME_TEST_RESULTS }}
         uses: actions/upload-artifact@v3
         with:
-          name: Test results
+          name: ${{ env.ARTIFACT_NAME_TEST_RESULTS }}
           path: |
             target/site/surefire-report.html
             target/surefire-reports/*.xml
@@ -56,17 +60,14 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Download BOM artifact
+      - name: Download Artifact ${{ env.ARTIFACT_NAME_BOM }}
         uses: actions/download-artifact@v3
         with:
-          name: BOM
+          name: ${{ env.ARTIFACT_NAME_BOM }}
       - name: Run CycloneDX CLI
-        #        uses: docker://cyclonedx/cyclonedx-cli:latest
-        #        with:
-        #          args: analyze --input-file bom.xml --output-format json --output-file $CYCLONE_DX_REPORT_FILE
-        run: docker run --rm -v "$(pwd)":/workspace cyclonedx/cyclonedx-cli:latest analyze --input-file /workspace/bom.xml --output-format json > ${{ env.CYCLONE_DX_REPORT_FILE }}
-      - name: Save CycloneDX report as artifact
+        run: docker run --rm -v "$(pwd)":/workspace cyclonedx/cyclonedx-cli:latest analyze --input-file /workspace/bom.xml --output-format json > ${{ env.FILE_CYCLONE_DX_REPORT }}
+      - name: Archive ${{ env.ARTIFACT_NAME_CYCLONE_DX_REPORT }}
         uses: actions/upload-artifact@v3
         with:
-          name: Cyclone DX report
-          path: ${{ env.CYCLONE_DX_REPORT_FILE }}
+          name: ${{ env.ARTIFACT_NAME_CYCLONE_DX_REPORT }}
+          path: ${{ env.FILE_CYCLONE_DX_REPORT }}
