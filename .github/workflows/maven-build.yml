@@ -23,7 +23,7 @@ jobs:
       - name: Build with Maven
         run: mvn -B clean install test package
       - name: Generate CycloneDX SBOM
-        run: mvn cyclonedx:makeAggregateBom
+        run: mvn cyclonedx:makeBom
       - name: Archive Artifacts
         uses: actions/upload-artifact@v3
         with:

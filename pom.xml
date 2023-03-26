@@ -112,10 +112,15 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>makeAggregateBom</goal>
+                            <goal>makeBom</goal>
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <projectType>library</projectType>
+                    <includeRuntimeScope>false</includeRuntimeScope>
+                    <includeCompileScope>false</includeCompileScope>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
