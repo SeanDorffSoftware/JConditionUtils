@@ -29,7 +29,7 @@ jobs:
           server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
           settings-path: ${{ github.workspace }} # location for the settings.xml file
       - name: Build with Maven
-        run: mvn -B clean install test package
+        run: mvn -B install test package
       - name: Generate CycloneDX ${{ env.ARTIFACT_NAME_BOM }}
         run: mvn cyclonedx:makeBom
       - name: Archive ${{ env.ARTIFACT_NAME_JAR }}
