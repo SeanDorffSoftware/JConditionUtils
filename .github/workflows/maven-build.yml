@@ -49,3 +49,15 @@ jobs:
           path: |
             target/site/surefire-report.html
             target/surefire-reports/*.xml
+  cyclonedx:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run CycloneDX CLI
+        uses: docker://cyclonedx/cyclonedx-cli:latest
+        with:
+          args: analyze --file /github/workspace/target/bom.xml --json
+      - name: Save CycloneDX report as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Cyclone DX report
+          path: report.json
