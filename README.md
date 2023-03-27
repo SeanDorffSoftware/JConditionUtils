@@ -49,3 +49,6 @@ if (ObjectConditionUtils.<i>equalsNone</i>(object1, object2, object3, object4) {
 This project is available under the MIT License.
 See [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php) for
 details.
+
+# Build status
+[![Maven Build](https://github.com/SeanDorff/JConditionTools/actions/workflows/maven-build.yml/badge.svg)](https://github.com/SeanDorff/JConditionTools/actions/workflows/maven-build.yml)
