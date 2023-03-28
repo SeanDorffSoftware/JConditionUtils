@@ -3,8 +3,8 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>io.github.seandorff</groupId>
-    <artifactId>JConditionUtil</artifactId>
+    <groupId>io.github.seandorffsoftware</groupId>
+    <artifactId>jconditionutils</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
         <dependency>
@@ -69,7 +69,7 @@
         <dependency>
             <groupId>org.codehaus.plexus</groupId>
             <artifactId>plexus-resources</artifactId>
-            <version>1.1.0</version>
+            <version>1.2.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -187,11 +187,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
                 <version>3.0.0-M5</version>
-                <configuration>
-                    <locales>
-                        <locale>en</locale>
-                    </locales>
-                </configuration>
                 <executions>
                     <execution>
                         <id>surefire-html-report</id>
