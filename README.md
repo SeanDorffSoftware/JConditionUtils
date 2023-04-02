@@ -28,7 +28,7 @@ With Java Condition Tools your code can look like this.
 ```java
 class ExampleClass {
   void exampleMethod() {
-    if (ObjectConditionUtils.areNotNull(object1, object2, object3) {
+    if (ObjectConditionUtils.areNotNull(object1, object2, object3)) {
       // execute something
     }
   }
@@ -41,7 +41,7 @@ In standard Java you would have to write something like the following code.
 ```java
 class ExampleClass {
   void exampleMethod() {
-    if (!object1.equals(object2) && !object1.equals(object3) && !object1.equals(object4) {
+    if (!object1.equals(object2) && !object1.equals(object3) && !object1.equals(object4)) {
       // execute something
     }
   }
@@ -53,7 +53,7 @@ With Java Condition Tools your code can look like this.
 ```java
 class ExampleClass {
   void exampleMethod() {
-    if (ObjectConditionUtils.equalsNone(object1, object2, object3, object4) {
+    if (ObjectConditionUtils.equalsNone(object1, object2, object3, object4)) {
       // execute something
     }
   }
