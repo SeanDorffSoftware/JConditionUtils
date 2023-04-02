@@ -1,4 +1,4 @@
-# jcondition_tools
+# JConditionUtils
 
 Java Condition Tools
 
@@ -13,36 +13,36 @@ common conditions more concise.
 
 In standard Java you would have to write something like the following code.
 
-<pre>
+```java
 if (object1 != null && object2 != null && object3 != null) {
   // execute something
 }
-</pre>
+```
 
 With Java Condition Tools your code can look like this.
 
-<pre>
-if (ObjectConditionUtils.<i>areNotNull</i>(object1, object2, object3) {
+```java
+if (ObjectConditionUtils.areNotNull(object1, object2, object3) {
   // execute something
 }
-</pre>
+```
 
 ## Compare inequality of with a number of other objects
 
 In standard Java you would have to write something like the following code.
-<pre>
+```java
 if (!object1.equals(object2) && !object1.equals(object3) && !object1.equals(object4) {
   // execute something
 }
-</pre>
+```
 
 With Java Condition Tools your code can look like this.
 
-<pre>
-if (ObjectConditionUtils.<i>equalsNone</i>(object1, object2, object3, object4) {
+```java
+if (ObjectConditionUtils.equalsNone(object1, object2, object3, object4) {
   // execute something
 }
-</pre>
+```
 
 # License
 
