@@ -1,7 +1,7 @@
 package jcondition_tools.condition_utils;
 
 /**
- * ObjectConditionUtils
+ * PrimitiveConditionUtils
  * Provides static methods for common conditions.
  *
  * @author Friedemann Metschies
