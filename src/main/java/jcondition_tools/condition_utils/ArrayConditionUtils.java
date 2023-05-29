@@ -86,6 +86,7 @@ public class ArrayConditionUtils {
      * @return {@code true} if {@code array} contains all {@code elements}
      * @since 1.0.0
      */
+    @SafeVarargs
     public static <T> boolean containsAll(T[] array, T... elements) {
         if (isNullOrEmpty(elements)) {
             return true;
@@ -112,6 +113,7 @@ public class ArrayConditionUtils {
      * @return {@code true} if {@code array} contains at least one element from {@code elements}
      * @since 1.0.0
      */
+    @SafeVarargs
     public static <T> boolean containsAny(T[] array, T... elements) {
         if (isNullOrEmpty(elements)) {
             return false;
@@ -138,6 +140,7 @@ public class ArrayConditionUtils {
      * @return {@code true} if {@code array} contains none of the elements in {@code elements}
      * @since 1.0.0
      */
+    @SafeVarargs
     public static <T> boolean containsNone(T[] array, T... elements) {
         if (isNullOrEmpty(elements)) {
             return true;
