@@ -11,6 +11,7 @@ package jcondition_tools.condition_utils;
 public class ObjectConditionUtils {
     /**
      * Only static methods. Hide constructor.
+     * @since 1.0.0
      */
     private ObjectConditionUtils() {
     }
@@ -18,6 +19,7 @@ public class ObjectConditionUtils {
     /**
      * @param objects to be checked
      * @return {@code true} if all parameters are not {@code null}
+     * @since 1.0.0
      */
     public static boolean areNotNull(Object... objects) {
         if (objects == null || objects.length == 0) {
@@ -36,6 +38,7 @@ public class ObjectConditionUtils {
     /**
      * @param objects to be checked
      * @return {@code true} if all parameters are {@code null} or there is no parameter
+     * @since 1.0.0
      */
     public static boolean areNull(Object... objects) {
         if (objects == null || objects.length == 0) {
@@ -55,6 +58,7 @@ public class ObjectConditionUtils {
      * @param value       to be compared
      * @param comparisons to be used
      * @return {@code true} if {@code value} equals all objects in {@code comparisons}
+     * @since 1.0.0
      */
     public static boolean equalsAll(Object value, Object... comparisons) {
         if (value == null) {
@@ -78,6 +82,7 @@ public class ObjectConditionUtils {
      * @param value       to be compared
      * @param comparisons to be used
      * @return {@code true} if {@code value} equals any object in {@code comparisons}
+     * @since 1.0.0
      */
     public static boolean equalsAny(Object value, Object... comparisons) {
         if (value == null) {
@@ -101,6 +106,7 @@ public class ObjectConditionUtils {
      * @param value       to be compared
      * @param comparisons to be used
      * @return {@code true} if {@code value} equals no object in {@code comparisons}
+     * @since 1.0.0
      */
     public static boolean equalsNone(Object value, Object... comparisons) {
         if (value == null) {
@@ -123,6 +129,7 @@ public class ObjectConditionUtils {
     /**
      * @param objects to be checked
      * @return {@code true} if {@code objects} contains a value that is not {@code null}
+     * @since 1.0.0
      */
     public static boolean isAnyNotNull(Object... objects) {
         if (objects == null || objects.length == 0) {
@@ -141,6 +148,7 @@ public class ObjectConditionUtils {
     /**
      * @param objects to be checked
      * @return {@code true} if {@code objects} contains a value that is {@code null} or there is no parameter
+     * @since 1.0.0
      */
     public static boolean isAnyNull(Object... objects) {
         if (objects == null || objects.length == 0) {

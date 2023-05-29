@@ -14,6 +14,7 @@ import java.util.List;
 public class ArrayConditionUtils {
     /**
      * Only static methods. Hide constructor.
+     * @since 1.0.0
      */
     private ArrayConditionUtils() {
     }
@@ -22,6 +23,7 @@ public class ArrayConditionUtils {
      * @param array to be checked
      * @param <T>   type
      * @return {@code true} if {@code array} is not {@code null} or empty
+     * @since 1.0.0
      */
     public static <T> boolean isNotNullOrEmpty(T[] array) {
         return (array != null && array.length != 0);
@@ -31,6 +33,7 @@ public class ArrayConditionUtils {
      * @param array to be checked
      * @param <T>   type
      * @return {@code true} if {@code array} is {@code null} or empty
+     * @since 1.0.0
      */
     public static <T> boolean isNullOrEmpty(T[] array) {
         return (array == null || array.length == 0);
@@ -40,6 +43,7 @@ public class ArrayConditionUtils {
      * @param array to be checked
      * @param <T>   type
      * @return {@code true} if all elements in {@code array} are not {@code null}
+     * @since 1.0.0
      */
     public static <T> boolean areAllElementsNotNull(T[] array) {
         if (isNullOrEmpty(array)) {
@@ -59,6 +63,7 @@ public class ArrayConditionUtils {
      * @param array to be checked
      * @param <T>   type
      * @return {@code true} if any element in {@code array} is {@code null}
+     * @since 1.0.0
      */
     public static <T> boolean isAnyElementNull(T[] array) {
         if (isNullOrEmpty(array)) {
@@ -79,6 +84,7 @@ public class ArrayConditionUtils {
      * @param elements to be searched
      * @param <T>      type
      * @return {@code true} if {@code array} contains all {@code elements}
+     * @since 1.0.0
      */
     public static <T> boolean containsAll(T[] array, T... elements) {
         if (isNullOrEmpty(elements)) {
@@ -104,6 +110,7 @@ public class ArrayConditionUtils {
      * @param elements to be searched
      * @param <T>      type
      * @return {@code true} if {@code array} contains at least one element from {@code elements}
+     * @since 1.0.0
      */
     public static <T> boolean containsAny(T[] array, T... elements) {
         if (isNullOrEmpty(elements)) {
@@ -129,6 +136,7 @@ public class ArrayConditionUtils {
      * @param elements to be searched
      * @param <T>      type
      * @return {@code true} if {@code array} contains none of the elements in {@code elements}
+     * @since 1.0.0
      */
     public static <T> boolean containsNone(T[] array, T... elements) {
         if (isNullOrEmpty(elements)) {

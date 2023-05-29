@@ -13,6 +13,7 @@ import java.util.Collection;
 public class CollectionConditionUtils {
     /**
      * Only static methods. Hide constructor.
+     * @since 1.0.0
      */
     private CollectionConditionUtils() {
     }
@@ -21,6 +22,7 @@ public class CollectionConditionUtils {
      * @param collection to be checked
      * @param <T>        type
      * @return {@code true} if {@code collection} is not {@code null} or empty
+     * @since 1.0.0
      */
     public static <T> boolean isNotNullOrEmpty(Collection<T> collection) {
         return (collection != null && !collection.isEmpty());
@@ -30,6 +32,7 @@ public class CollectionConditionUtils {
      * @param collection to be checked
      * @param <T>        type
      * @return {@code true} if {@code collection} is {@code null} or empty
+     * @since 1.0.0
      */
     public static <T> boolean isNullOrEmpty(Collection<T> collection) {
         return (collection == null || collection.isEmpty());
