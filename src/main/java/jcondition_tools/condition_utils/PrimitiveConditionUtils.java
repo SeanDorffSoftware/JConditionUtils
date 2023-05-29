@@ -6,6 +6,7 @@ package jcondition_tools.condition_utils;
  *
  * @author Friedemann Metschies
  * @version 1.0.0
+ * @since 1.0.0
  */
 public class PrimitiveConditionUtils {
     public static final String BOUNDARY_ORDER_ARGUMENT_EXCEPTION = "lowerBoundary is greater than upperBoundary";
