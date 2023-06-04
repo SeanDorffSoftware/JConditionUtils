@@ -7,6 +7,9 @@ Java Condition Tools
 The purpose of the Java Condition Tools is to provide a set of static methods in a utility class which can help to make
 common conditions more concise.
 
+# Build status
+[![Maven Build](https://github.com/SeanDorff/JConditionTools/actions/workflows/maven-build.yml/badge.svg)](https://github.com/SeanDorff/JConditionTools/actions/workflows/maven-build.yml)
+
 # Examples
 
 ## Test if several objects are not null
@@ -65,9 +68,6 @@ class ExampleClass {
 This project is available under the MIT License.
 See [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php) for
 details.
-
-# Build status
-[![Maven Build](https://github.com/SeanDorff/JConditionTools/actions/workflows/maven-build.yml/badge.svg)](https://github.com/SeanDorff/JConditionTools/actions/workflows/maven-build.yml)
 
 # Deployment to OSSRH
 The file `settings.xml` in `~/.m2` has to contain the following lines.
