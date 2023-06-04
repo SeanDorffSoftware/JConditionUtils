@@ -12,11 +12,11 @@
             <name>GitHub Packages</name>
             <url>https://maven.pkg.github.com/SeanDorffSoftware/JConditionUtils</url>
         </repository>-->
-        <snapshotRepository>
+        <!--<snapshotRepository>
             <id>ossrh</id>
             <name>Central Repository OSSRH</name>
             <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
+        </snapshotRepository>-->
     </distributionManagement>
     <licenses>
         <license>
@@ -216,7 +216,7 @@
                 </executions>
             </plugin>
             <!-- deployment -->
-            <plugin>
+            <!-- <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
                 <version>1.6.7</version>
@@ -240,7 +240,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> -->
         </plugins>
     </build>
 </project>
