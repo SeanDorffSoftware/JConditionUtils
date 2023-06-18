@@ -179,7 +179,7 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>attach-sources</id>
+                        <id>attach-sources-no-fork</id>
                         <goals>
                             <goal>jar-no-fork</goal>
                         </goals>
