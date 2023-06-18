@@ -6,17 +6,15 @@
     <groupId>io.github.seandorffsoftware</groupId>
     <artifactId>jconditionutils</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <description>Java Condition Utils</description>
     <distributionManagement>
-        <!--<repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/SeanDorffSoftware/JConditionUtils</url>
-        </repository>-->
-        <!--<snapshotRepository>
+        <snapshotRepository>
             <id>ossrh</id>
             <name>Central Repository OSSRH</name>
             <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>-->
+        </snapshotRepository>
     </distributionManagement>
     <licenses>
         <license>
@@ -24,11 +22,21 @@
             <url>http://www.opensource.org/licenses/mit-license.php</url>
         </license>
     </licenses>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <linkXRef>false</linkXRef>
+        <junit-jupiter-engine-version>5.9.2</junit-jupiter-engine-version>
+        <maven-surefire-version>3.1.0</maven-surefire-version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.9.2</version>
+            <version>${junit-jupiter-engine-version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -97,25 +105,18 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
-    <packaging>pom</packaging>
-
-    <description>Java Condition Utils</description>
 
     <build>
+        <sourceDirectory>src/main</sourceDirectory>
+        <testSourceDirectory>src/test</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -152,6 +153,12 @@
                             <goal>javadoc</goal>
                         </goals>
                     </execution>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
                 </executions>
             </plugin>
             <plugin>
@@ -171,12 +178,18 @@
                             </excludes>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
                 </executions>
             </plugin>
-            <plugin>
+            <plugin> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version>
+                <version>${maven-surefire-version}</version>
                 <configuration>
                     <includes>
                         <include>**/*Test.java</include>
@@ -200,11 +213,18 @@
                         </goals>
                     </execution>
                 </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.junit.jupiter</groupId>
+                        <artifactId>junit-jupiter-engine</artifactId>
+                        <version>${junit-jupiter-engine-version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
-            <plugin>
+            <plugin> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-report-plugin -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>3.0.0-M5</version>
+                <version>${maven-surefire-version}</version>
                 <executions>
                     <execution>
                         <id>surefire-html-report</id>
@@ -216,7 +236,7 @@
                 </executions>
             </plugin>
             <!-- deployment -->
-            <!-- <plugin>
+            <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
                 <version>1.6.7</version>
@@ -224,7 +244,7 @@
                 <configuration>
                     <serverId>ossrh</serverId>
                     <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                    <autoReleaseAfterClose>false</autoReleaseAfterClose>
                 </configuration>
             </plugin>
             <plugin>
@@ -240,7 +260,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin> -->
+            </plugin>
         </plugins>
     </build>
 </project>
