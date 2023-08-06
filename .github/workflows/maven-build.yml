@@ -33,7 +33,7 @@ jobs:
       - name: Check secret key
         run: gpg --list-secret-keys
       - name: Build with Maven
-        run: mvn -Dgpg.passphrase=${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }} deploy -B install test package
+        run: mvn -Dgpg.passphrase=${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }} -B install test package
       - name: Generate CycloneDX ${{ env.ARTIFACT_NAME_BOM }}
         run: mvn cyclonedx:makeBom
       - name: Archive ${{ env.ARTIFACT_NAME_JAR }}
